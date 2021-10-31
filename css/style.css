@@ -1,0 +1,344 @@
+/* Global styling */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+h1, h2 {
+    font-family: 'Notable', sans-serif;
+}
+h1:first-letter {
+    font-size: 50px;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+header img {
+    width: 100px;
+    height: 50px;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.hamburger {
+    font-size: 30px;
+}
+
+.small-nav {
+    display: none;
+    cursor: pointer;
+}
+.small-nav ul {
+    display: none;
+}
+.small-nav:hover ul {
+    display: block;
+}
+@media only screen and (max-width: 480px) {
+    .small-nav {
+        display: block;
+    }
+    .big-nav {
+        display: none;
+    }
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+a:visited {
+    color: #3342b2;
+}
+a:hover {
+    color: #a94242;
+}
+img + figcaption {
+    font-style: italic;
+    position: relative;
+    left: 10px;
+}
+
+footer {
+    width: 100%;
+    height: 30px;
+    background: grey;
+    font-size: 0.8em;
+
+    letter-spacing: 1px;
+    line-height: 22px;
+    text-indent: 5px;
+    word-spacing: 5px;
+}
+
+footer > .cookie {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    opacity: 50%;
+    background: #FA0;
+    height: 22px;
+    padding: 4px;
+    z-index: 9999;
+}
+
+/* Index Styling */
+@media only screen and (min-width: 1180px) {
+    #index main {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #index .article-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #index article img {
+        float: right;
+    }
+}
+@media only screen and (min-width: 481px) and (max-width: 1179px) {
+    #index main {
+        flex-direction: column;
+    }
+    #index .article-section {
+        flex-direction: column-reverse;
+    }
+    #index article img {
+        float: left;
+    }
+}
+@media only screen and (max-width: 480px) {
+    #index main {
+        flex-direction: column;
+    }
+    #index .article-section {
+        flex-direction: column-reverse;
+    }
+    #index article img {
+        float: left;
+    }
+    #index #video-section {
+        display: none;
+    }
+}
+
+/* Best Destinations styling */
+#bestdestinations main {
+    display: grid;
+}
+#bestdestinations main section {
+    display: grid;
+}
+#bestdestinations main aside {
+    display: grid;
+}
+#bestdestinations .art1 {
+    grid-row: 1/7;
+    grid-column: 2;
+    background: #ffc9c9;
+}
+#bestdestinations .art2 {
+    grid-row: 1/3;
+    grid-column: 1;
+    background: #c8c8ff;
+}
+#bestdestinations .art3 {
+    grid-row: 1/4;
+    grid-column: 3;
+    background: #ffffc7;
+}
+#bestdestinations .art4 {
+    grid-row: 4/7;
+    grid-column: 3;
+    background: #c8ffff;
+}
+#bestdestinations .art5 {
+    grid-row: 3/8;
+    grid-column: 1;
+    background: #c8fac8;
+}
+#bestdestinations .art6 {
+    grid-row: 7;
+    grid-column: 2/4;
+    background: #ffc9ff;
+}
+#bestdestinations .asi1 {
+    grid-row: 1/3;
+    grid-column: 1;
+    background: #C0C0C0;
+}
+#bestdestinations .asi2 {
+    grid-row: 1/3;
+    grid-column: 2;
+    background: #C0C0C0;
+}
+#bestdestinations .asi3 {
+    grid-row: 1/3;
+    grid-column: 3;
+    background: #C0C0C0;
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1179px) {
+    #bestdestinations .art1 {
+        grid-row: 1/3;
+        grid-column: 1;
+    }
+    #bestdestinations .art2 {
+        grid-row: 1/4;
+        grid-column: 2;
+    }
+    #bestdestinations .art3 {
+        grid-row: 3/7;
+        grid-column: 1;
+    }
+    #bestdestinations .art4 {
+        display: none;
+    }
+    #bestdestinations .art5 {
+        grid-row: 4/7;
+        grid-column: 2;
+    }
+    #bestdestinations .art6 {
+        grid-row: 7/9;
+        grid-column: 1/3;
+    }
+    #bestdestinations .asi1 {
+        grid-row: 1/3;
+        grid-column: 1;
+    }
+    #bestdestinations .asi2 {
+        grid-row: 1/3;
+        grid-column: 2;
+    }
+    #bestdestinations .asi3 {
+        display: none;
+    }
+}
+@media only screen and (max-width: 480px) {
+    #bestdestinations .art1 {
+        grid-row: 10/13;
+        grid-column: 1;
+    }
+    #bestdestinations .art2 {
+        grid-row: 7/10;
+        grid-column: 1;
+    }
+    #bestdestinations .art3 {
+        grid-row: 4/7;
+        grid-column: 1;
+    }
+    #bestdestinations .art4 {
+        display: none;
+    }
+    #bestdestinations .art5 {
+        grid-row: 1/4;
+        grid-column: 1;
+    }
+    #bestdestinations .art6 {
+        display: none;
+    }
+    #bestdestinations .asi1 {
+        grid-row: 1;
+        grid-column: 1;
+    }
+    #bestdestinations .asi2 {
+        grid-row: 2;
+        grid-column: 1;
+    }
+    #bestdestinations .asi3 {
+        grid-row: 3;
+        grid-column: 1;
+    }
+}
+
+/* Tickets styling */
+#tickets main {
+    display: flex;
+    flex-direction: column;
+}
+#tickets .main-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#tickets aside {
+    display: flex;
+    flex-direction: column;
+}
+#tickets figure {
+    display: flex;
+    flex-direction: column;
+}
+#tickets table {
+    border-width: 5px;
+    border-style: double;
+    border-color: #FFAA00;
+}
+#tickets table td:first-child {
+    background: #ff0;
+}
+#tickets aside img {
+    float: right;
+    width: 300px;
+    height: 200px;
+}
+@media only screen and (min-width: 481px) and (max-width: 1179px) {
+    #tickets .main-section {
+        flex-direction: column;
+    }
+    #tickets aside {
+        flex-direction: row;
+    }
+    #tickets aside img {
+        float: right;
+        width: 150px;
+        height: 100px;
+    }
+}
+@media only screen and (max-width: 480px) {
+    #tickets article {
+        display: none;
+    }
+    #tickets .main-section {
+        flex-direction: column;
+    }
+}
+
+/* Contact styling */
+#contact main {
+    display: flex;
+    flex-direction: column;
+}
+#contact .main-section {
+    display: flex;
+    flex-direction: row;
+}
+#contact aside {
+    display: flex;
+    flex-direction: column;
+}
+#contact label {
+    display: block;
+}
+@media only screen and (max-width: 480px) {
+    #contact .main-section {
+        flex-direction: column;
+    }
+}
